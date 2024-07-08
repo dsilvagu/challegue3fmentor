@@ -1,0 +1,58 @@
+---
+interface Props {
+    p1: string,
+    p2: string,
+    p3: string,
+    p4: string,
+}
+const {p1, p2, p3 ,p4} = Astro.props;
+
+import img1 from '../images/icon-memory.svg';
+import img2 from '../images/icon-reaction.svg';
+import img3 from '../images/icon-verbal.svg';
+import img4 from '../images/icon-visual.svg'
+
+---
+
+<div class="p-5 flex flex-col gap-5 container">
+    <h1 class="text-pdgblue font-bold text-lg">Summary</h1>
+    <ul class="flex flex-col gap-5">
+        <li class="text-plight bg-plight/10 rounded-xl justify-between flex p-3">
+            <div class="flex items-center gap-2">
+                <img src={img2.src} alt=""><span class="font-semibold">Reaction</span>
+            </div>
+            <div class="text-pdgblue">
+                <p class="font-bold">{p1}<span class="text-pdgblue/50 pl-2"> / 100</span></p>
+            </div>
+        </li>
+
+        <li class="text-poyellow bg-poyellow/10 rounded-xl justify-between flex p-3">
+            <div class="flex items-center gap-2">
+                <img src={img1.src} alt=""><span class="font-semibold">Memory</span>
+            </div>
+            <div class="text-pdgblue">
+                <p class="font-bold">{p2}<span class="text-pdgblue/50 pl-2"> / 100</span></p>
+            </div>
+        </li>
+
+        <li class="text-pgteal bg-pgteal/10 rounded-xl justify-between flex p-3">
+            <div class="flex items-center gap-2">
+                <img src={img3.src} alt=""><span class="font-semibold">Verbal</span>
+            </div>
+            <div class="text-pdgblue">
+                <p class="font-bold">{p3}<span class="text-pdgblue/50 pl-2"> / 100</span></p>
+            </div>
+        </li>
+
+        <li class="text-pcblue bg-pcblue/10 rounded-xl justify-between flex p-3">
+            <div class="flex items-center gap-2">
+                <img src={img4.src} alt=""><span class="font-semibold">Visual</span>
+            </div>
+            <div class="text-pdgblue">
+                <p class=" font-bold">{p4}<span class="text-pdgblue/50 pl-2"> / 100</span></p>
+            </div>
+        </li>
+    </ul>
+
+    <button class=" text-pwhite bg-pdgblue py-3 font-semibold rounded-3xl container">Continue</button>
+</div>

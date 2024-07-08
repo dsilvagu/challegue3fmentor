@@ -1,0 +1,17 @@
+---
+interface Props {
+    number: string,
+}
+const {number} = Astro.props;
+---
+<div class="text-center flex flex-col gap-2 bg-gradient-to-br from-plsblue to-pcblue text-pwhite rounded-b-3xl lg:rounded-3xl container lg:items-center lg:justify-center">
+    <p class="py-5">Your Result</p>
+    <div class="mx-auto size-32 rounded-full flex flex-col items-center justify-center bg-gradient-to-br from-pcblue to-plsblue">
+        <h1 class="text-5xl font-bold">{number}</h1>
+        <p class="text-pllavender font-semibold">of 100</p>
+    </div>
+    <article class="pb-10 px-12 pt-5">
+        <p class="text-ppbllue font-semibold text-2xl">Great</p>
+        <p class="text-pllavender">You scored higher than 65% of the people who have taken these test.</p>
+    </article>
+</div>
